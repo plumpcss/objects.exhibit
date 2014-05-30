@@ -1,0 +1,16 @@
+{
+  "name": "objects.exhibit",
+  "version": "0.1.0",
+  "authors": [
+    "James Howard <james@plumpdigital.co.uk>"
+  ],
+  "description": "Object for displaying an image above descriptive content.",
+  "main": "_objects.exhibit.scss",
+  "keywords": [
+    "plumpcss",
+    "oocss",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "http://www.plumpdigital.co.uk/"
+}
