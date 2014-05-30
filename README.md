@@ -10,6 +10,5 @@ Object for displaying an image above descriptive content.
 		<div class="exhibit__body">
 			<p>This is a default placeholder image provided by placekitten.</p>
 		</div>
-		</div>
 	</div>
 ```
