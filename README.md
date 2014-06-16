@@ -1,6 +1,6 @@
 # The exhibit object
 
-Object for displaying an image above descriptive content.
+Object for displaying media above descriptive content.
 
 ```html
 	<div class="exhibit">
