@@ -1,15 +1,17 @@
 {
   "name": "plumpcss-exhibit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "authors": [
-    "James Howard <james@plumpdigital.co.uk>"
+    "James Howard <james@plumpdigital.co.uk>",
+    "Jon Hurrell <jon@plumpdigital.co.uk>"
   ],
-  "description": "Object for displaying an image above descriptive content.",
+  "description": "Object for displaying media above descriptive content.",
   "main": "_objects.exhibit.scss",
   "keywords": [
     "plumpcss",
     "oocss",
-    "css"
+    "css",
+    "object"
   ],
   "license": "MIT",
   "homepage": "http://www.plumpdigital.co.uk/"
