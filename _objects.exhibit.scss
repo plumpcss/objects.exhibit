@@ -1,8 +1,15 @@
-/*------------------------------------*\
-    #EXHIBIT
-\*------------------------------------*/
+///*------------------------------------*\
+//   #EXHIBIT
+//\*------------------------------------*/
 
-.exhibit {
+//    Object for displaying media above descriptive content.
+
+//    Predefine the variables below in order to alter and enable specific features.
+$plump-exhibit-namespace:             $plump-namespace !default;
+
+.#{$plump-exhibit-namespace}o-exhibit,
+%#{$plump-exhibit-namespace}o-exhibit {
+	display: block;
 
 	&__media {
 		display: block;
