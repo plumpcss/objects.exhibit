@@ -1,11 +1,144 @@
 /*------------------------------------*\
-    #EXHIBIT
+	 #EXHIBIT
 \*------------------------------------*/
 
-.exhibit {
+/**
+ *    The exhibit object simply stacks an image on top of some text-like content.
+ */
 
-	&__media {
-		display: block;
-		margin: 0 auto;
+//    Predefine the variables below in order to alter and enable specific features.
+$plump-exhibit-namespace:     $plump-namespace !default;
+
+$plump-exhibit-gutter:            $plump-base-spacing-unit !default;
+$plump-exhibit-gutter--tiny:        quarter($plump-exhibit-gutter) !default;
+$plump-exhibit-gutter--small:         halve($plump-exhibit-gutter) !default;
+$plump-exhibit-gutter--large:        double($plump-exhibit-gutter) !default;
+$plump-exhibit-gutter--huge:      quadruple($plump-exhibit-gutter) !default;
+
+$plump-enable-exhibit--flush:     false !default;
+$plump-enable-exhibit--tiny:      false !default;
+$plump-enable-exhibit--small:     false !default;
+$plump-enable-exhibit--large:     false !default;
+$plump-enable-exhibit--huge:      false !default;
+$plump-enable-exhibit--center:    false !default;
+$plump-enable-exhibit--right:     false !default;
+$plump-enable-exhibit--center:    false !default;
+$plump-enable-exhibit--right:     false !default;
+
+
+
+
+
+/**
+ *    Stacked image-with-text object. A simple abstraction to cover a very commonly
+ *    occurring design pattern.
+ */
+.#{$plump-exhibit-namespace}exhibit,
+%#{$plump-exhibit-namespace}exhibit {
+	display: block;
+}
+
+	/**
+	 * 1. Eliminate whitespace around images.
+	 */
+	.#{$plump-exhibit-namespace}exhibit__media,
+	%#{$plump-exhibit-namespace}exhibit__media {
+		margin-bottom: $plump-exhibit-gutter;
+		vertical-align: middle; /* [1] */
+
+		@if ($plump-enable-exhibit--flush == true) {
+
+			/**
+			 *    No space between the image and the text content.
+			 */
+
+			.#{$plump-exhibit-namespace}exhibit--flush > &,
+			%#{$plump-exhibit-namespace}exhibit--flush > & {
+				margin-bottom: 0;
+			}
+
+		}
+
+		@if ($plump-enable-exhibit--tiny == true) {
+
+			/**
+			 *    Tiny space between the image and the text content.
+			 */
+
+			.#{$plump-exhibit-namespace}exhibit--tiny > &,
+			%#{$plump-exhibit-namespace}exhibit--tiny > & {
+				margin-bottom: $plump-exhibit-gutter--tiny;
+			}
+
+		}
+
+		@if ($plump-enable-exhibit--small == true) {
+
+			/**
+			 *    Small space between the image and the text content.
+			 */
+
+			.#{$plump-exhibit-namespace}exhibit--small > &,
+			%#{$plump-exhibit-namespace}exhibit--small > & {
+				margin-bottom: $plump-exhibit-gutter--small;
+			}
+
+		}
+
+		@if ($plump-enable-exhibit--large == true) {
+
+			/**
+			 *    Large space between the image and the text content.
+			 */
+
+			.#{$plump-exhibit-namespace}exhibit--large > &,
+			%#{$plump-exhibit-namespace}exhibit--large > & {
+				margin-bottom: $plump-exhibit-gutter--large;
+			}
+
+		}
+
+		@if ($plump-enable-exhibit--huge == true) {
+
+			/**
+			 *    Huge space between the image and the text content.
+			 */
+
+			.#{$plump-exhibit-namespace}exhibit--huge > &,
+			%#{$plump-exhibit-namespace}exhibit--huge > & {
+				margin-bottom: $plump-exhibit-gutter--huge;
+			}
+
+		}
+
 	}
+
+
+
+
+
+@if ($plump-enable-exhibit--right == true) {
+
+    /**
+     * Right-aligned exhibits.
+     */
+
+    .#{$plump-exhibit-namespace}exhibit--right,
+    %#{$plump-exhibit-namespace}exhibit--right {
+        text-align: right;
+    }
+
+}
+
+@if ($plump-enable-exhibit--center == true) {
+
+    /**
+     * Center-aligned exhibits.
+     */
+
+    .#{$plump-exhibit-namespace}exhibit--center,
+    %#{$plump-exhibit-namespace}exhibit--center {
+        text-align: center;
+    }
+
 }
