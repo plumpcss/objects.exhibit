@@ -117,6 +117,18 @@ $plump-enable-exhibit--right:     false !default;
 
 
 
+	/**
+	 *    Text-content.
+	 */
+	.#{$plump-exhibit-namespace}exhibit__body,
+	%#{$plump-exhibit-namespace}exhibit__body {
+		display: block;
+	}
+
+
+
+
+
 @if ($plump-enable-exhibit--right == true) {
 
     /**
